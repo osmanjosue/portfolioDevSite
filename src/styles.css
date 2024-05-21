@@ -2,6 +2,7 @@
   --background: #000000;
   --front: #ffffff;
   --variant: #8800ff;
+  --card: #e8e8e8;
 }
 
 * {
@@ -89,28 +90,55 @@ h2 {
   flex-wrap: wrap;
 }
 
-.profilePicture {
-  flex-basis: 50%;
+.profilePicture__iconButtons {
+  flex-basis: 65%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 4%;
-  filter: grayscale(1) drop-shadow(12px 12px 0px #dbdbdb);
+  max-width: 450px;
   min-width: 320px;
 }
 
-.profilePicture>img {
-  width: 100%;
-  max-width: 270px;
-  height: 300px;
-  object-fit: cover;
-  background: var(--background);
-  border-radius: 25px;
-  margin-left: auto;
+.profilePicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(1) drop-shadow(12px 12px 0px #dbdbdb);
+  width: 70%;
+  margin-bottom: 20px;
+  padding-top: 50px;
 }
 
+  .profilePicture>img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background: var(--background);
+    border-radius: 25px;
+  }
+
+  .iconButtons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+
+  .iconButtons a {
+    margin: 3px;
+    width: 20%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 .sectionTitle {
-  flex-basis: 50%;
+  flex-basis: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,28 +155,8 @@ h2 {
   flex-direction: column;
   gap: 16px 0;
   font-size: 1.5rem;
+  width: 100%;
 
-}
-
-.iconButtons {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-}
-
-.iconButtons a {
-  margin: 10px;
-  width: 100px;
-  aspect-ratio: 1;
-  border-radius: 25px;
-  background: var(--background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .contactLogo {
@@ -170,7 +178,7 @@ h2 {
   background: var(--background);
   width: 100%;
   align-items: center;
-  margin-bottom: 50px;
+  margin: 50px 0px;
 }
 
 .technologies {
@@ -197,7 +205,7 @@ h2 {
   object-fit: contain;
 }
 
-.technologieName {
+.technologyName {
   width: 100%;
   font-weight: 700;
   margin-top: 10px;
@@ -212,7 +220,6 @@ h2 {
 .webSections {
   position: relative;
   width: 100%;
-  padding-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +227,6 @@ h2 {
 
 .allFormation {
   width: 70%;
-  margin-bottom: 50px;
 }
 
 .allFormation>p,
@@ -268,8 +274,16 @@ h2 {
   width: 100%;
 }
 
-.experience {
+.experience_card {
+  background: var(--card);
   width: 70%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  margin-top: 50px;
+}
+
+.experience {
+  width: 100%;
   margin: 0 auto;
   background: var(--background);
   height: 10vh;
@@ -284,15 +298,53 @@ h2 {
 }
 
 .experienceDetails {
-  padding-top: 50px;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   font-size: 1.2rem;
 }
 
-.iconButtonLink {
-  padding-top: 50px;
-  gap: 30%;
+.iconButtons__experience {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+}
+
+.iconButtons__experience a {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.label_icon {
+  margin: 10px 40px;
+  flex-basis: 20%;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.label_icon>p {
+  background: var(--background);
+  border-radius: 25px;
+  color: var(--front);
+  padding: 5px 15px;
+  border: 10px;
+  white-space: nowrap;
+
 }
 
 /* ================= Experience end ================= */
+/* ================= Footer start ================= */
+
+
+
+/* ================= Footer end ================= */

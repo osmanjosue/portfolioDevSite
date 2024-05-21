@@ -18,28 +18,39 @@
 
 <section class="profile">
   <div class="cardProfile">
-    <div class="profilePicture">
-      <img src="./assets/images/IMG_20230209_080358.jpg" />
+    <div class="profilePicture__iconButtons">
+      <div class="profilePicture">
+        <img src="./assets/images/IMG_20230209_080358.jpg" />
+      </div>
+      <div class="iconButtons">
+        <a
+          *ngFor="let icons of socialIcons; index as i"
+          [href]="icons.address"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img class="contactLogo colorTheme" [src]="icons.icon"
+        /></a>
+      </div>
     </div>
+
     <div class="sectionTitle">
-      <h2>
-        Osman <br />
-        Herrera
-      </h2>
+      <h2>Osman Herrera</h2>
       <p style="margin-top: -10px">Desarrollador FullStack!</p>
       <hr style="width: 70%" />
       <div class="aboutMe">
-        <p>Emprendedor desde hace mas de 12 años</p>
-        <p>Desarrollador de aplicaciones web FreeLance</p>
+        <p>
+          Profundamente interesado en la productividad y los resultados, siempre
+          buscando optimizar cada proceso para alcanzar la máxima eficiencia y
+          efectividad en mi código. Dedicado y enfocado para establecer y lograr
+          metas ambiciosas, asegurando así un rendimiento superior y un progreso
+          constante en mis proyectos. Me gusta salir de mi zona de confort y soy
+          una persona en búsqueda de retos sin dejar de lado la responsabilidad
+          y lealtad de los compromisos y deberes hacia mi trabajo.
+        </p>
       </div>
     </div>
   </div>
 
-  <div class="iconButtons">
-    <a *ngFor="let icons of socialIcons; index as i"
-      ><img class="contactLogo colorTheme" [src]="icons.icon"
-    /></a>
-  </div>
   <hr class="linea-hr" />
 </section>
 
@@ -48,12 +59,13 @@
     <h2>Habilidades</h2>
   </div>
   <div class="technologies">
-    <a *ngFor="let technologie of technologies">
+    <a *ngFor="let technology of technologies">
       <img
         class="skillLogo colorTheme"
-        src="./assets/icons/technologies-{{ technologie.title }}.svg"
-        alt=""/>
-      <p class="technologieName">{{ technologie.title }}</p>
+        src="./assets/icons/technologies-{{ technology.title }}.svg"
+        alt=""
+      />
+      <p class="technologyName">{{ technology.title }}</p>
     </a>
   </div>
 </section>
@@ -63,10 +75,10 @@
   </div>
 
   <div class="allFormation">
-    <p>Universidad Tecnologica de Honduras</p>
+    <p>Universidad Tecnológica de Honduras</p>
     <div class="formation-n-date">
       <li>
-        Tecnico Universitario
+        Técnico Universitario en Desarrollo de Aplicaciones Computacionales.
       </li>
       <p>(Estudiando Actualmente)</p>
     </div>
@@ -75,7 +87,11 @@
   <div class="allFormation" *ngFor="let certificate of certificates">
     <div class="certificatePlatform">
       <p>Certificado {{ certificate.platform }}</p>
-      <a>
+      <a
+        href="{{certificate.link}}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
           class="colorTheme linkExterno"
           src="./assets/icons/linkExterno.svg"
@@ -99,91 +115,126 @@
     <h2>Experiencia</h2>
   </div>
   <div class="experiences">
-    <div class="experience">
-      <p>
-        Desarrollador <span class="colorTheme">web</span> en Fundación Prolancho
-      </p>
-      <p class="colorTheme">2023-2024</p>
-    </div>
-    <ul class="experienceDetails padding-ul">
-      <li>
-        Desarrollo del sitio web con Angular15 de frontEnd y NodeJs para el
-        desarrollo de su API, base de datos con MongoDB y utilizando cloudinary
-        para el manejo de las imágenes.
-      </li>
-      <li>
-        Autenticado con JWT desde el lado del servidor y validación de
-        credenciales para envio de un menú diferente para su administración.
-      </li>
-      <li>
-        Pagina alojada en una capa EC2 en AWS usando:
-        <ul class="padding-ul">
-          <li>Ubuntu como S.O.</li>
-          <li>
-            NGINX como servidor web gestionando las solicitudes HTTP entrantes.
-          </li>
-          <li>
-            PM2 como administrador de procesos de la aplicación de NodeJS.
-          </li>
-        </ul>
-      </li>
-      <li>
-        Actualmente trabajando en nuevas características a pedido de la
-        organización.
-      </li>
-    </ul>
-    <div class="iconButtons iconButtonLink">
-      <a
-        ><img
-          class="contactLogo colorTheme"
-          src="./assets/icons/technologies-GitHub.svg"
-      /></a>
-      <a
-        ><img class="contactLogo colorTheme" src="./assets/icons/website.svg"
-      /></a>
+    <div class="experience_card">
+      <div class="experience">
+        <p>
+          Desarrollador <span class="colorTheme">web</span> en Fundación
+          Prolancho
+        </p>
+        <p class="colorTheme">2023-2024</p>
+      </div>
+
+      <div class="iconButtons__experience">
+        <div class="label_icon">
+          <p>Repositorio del Proyecto</p>
+          <a
+            ><img
+              class="contactLogo colorTheme"
+              src="./assets/icons/technologies-GitHub.svg"
+          /></a>
+        </div>
+        <div class="label_icon">
+          <p>Sitio Web</p>
+          <a
+            href="https://www.fundacionprolancho.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="contactLogo colorTheme"
+              src="./assets/icons/website.svg"
+          /></a>
+        </div>
+      </div>
+
+      <ul class="experienceDetails padding-ul">
+        <li>
+          Desarrollo del sitio web con Angular15 de frontEnd y NodeJs para el
+          desarrollo de su API, base de datos con MongoDB y utilizando
+          cloudinary para el manejo de las imágenes.
+        </li>
+        <li>
+          Autenticado con JWT desde el lado del servidor y validación de
+          credenciales para envío de un menú diferente para su administración.
+        </li>
+        <li>
+          Pagina alojada en una capa EC2 en AWS usando:
+          <ul class="padding-ul">
+            <li>Ubuntu como S.O.</li>
+            <li>
+              NGINX como servidor web gestionando las solicitudes HTTP
+              entrantes.
+            </li>
+            <li>
+              PM2 como administrador de procesos de la aplicación de NodeJS.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Actualmente trabajando en nuevas características a pedido de la
+          organización.
+        </li>
+      </ul>
     </div>
   </div>
 
   <div class="experiences">
-    <div class="experience">
-      <p>
-        Diseñador <span class="colorTheme">Grafico</span>/ Coordinar de lanzamiento de <span class="colorTheme">Productos</span>
-      </p>
-      <p class="colorTheme">2012-2023</p>
-    </div>
-    <ul class="experienceDetails padding-ul">
-      <li>
-        Encargado del diseño, creación y desarrollo de ilustraciones.
-      </li>
-      <li>
-        Separación de colores para técnicas de estampado (serigrafía y sublimación).
-      </li>
-      <li>
-        Coordinación y manejo del personal para:
-        <ul class="padding-ul">
-          <li>Cumplimiento de los objetivos de producción.</li>
-          <li>
-            Lanzamiento de nuevos productos con fechas puntuales basados en metas pre-establecidas entre los colaboradores de la empresa.
-          </li>
-        </ul>
-      </li>
-      <li>
-        Actualmente trabajando en nuevas características a pedido de la
-        organización.
-      </li>
-    </ul>
-    <div class="iconButtons iconButtonLink">
-      <a
-        ><img class="contactLogo colorTheme" src="./assets/icons/facebook.svg"
-      /></a>
-      <a
-        ><img
-          class="contactLogo colorTheme"
-          src="./assets/icons/website.svg"
-      /></a>
+    <div class="experience_card">
+      <div class="experience">
+        <p>
+          Diseñador <span class="colorTheme">Gráfico</span>/ Coordinar de
+          lanzamiento de <span class="colorTheme">Productos</span>
+        </p>
+        <p class="colorTheme">2012-2023</p>
+      </div>
+      <div class="iconButtons__experience">
+        <div class="label_icon">
+          <p>Pagina de Facebook</p>
+          <a
+            href="https://www.facebook.com/beomegusta/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="contactLogo colorTheme"
+              src="./assets/icons/facebook.svg"
+          /></a>
+        </div>
+
+        <div class="label_icon">
+          <p>Sitio Web</p>
+          <a
+            ><img
+              class="contactLogo colorTheme"
+              src="./assets/icons/website.svg"
+          /></a>
+        </div>
+      </div>
+      <ul class="experienceDetails padding-ul">
+        <li>Encargado del diseño, creación y desarrollo de ilustraciones.</li>
+        <li>
+          Separación de colores para técnicas de estampado (serigrafía y
+          sublimación).
+        </li>
+        <li>
+          Coordinación y manejo del personal para:
+          <ul class="padding-ul">
+            <li>Cumplimiento de los objetivos de producción.</li>
+            <li>
+              Lanzamiento de nuevos productos con fechas puntuales basados en
+              metas pre-establecidas entre los colaboradores de la empresa.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Actualmente trabajando en nuevas características a pedido de la
+          organización.
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- =========================== Experience end =========================== -->
 
+<footer class="sectionCurriculum sectionTitle">
+  <h2>Contacto</h2>
+</footer>
