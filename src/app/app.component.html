@@ -8,7 +8,7 @@
 
 <section class="navbar">
   <div class="navbarContainer">
-    <div class="iconoYname">
+    <div class="icono-n-name">
       <i class="OHicono"></i>
       <h2 class="navbarOsmanDev">osmanherrera.dev</h2>
     </div>
@@ -39,8 +39,8 @@
       <hr style="width: 70%" />
       <div class="aboutMe">
         <p>
-          Profundamente interesado en la productividad y los resultados, siempre
-          buscando optimizar cada proceso para alcanzar la máxima eficiencia y
+          Enfocado en la productividad y los resultados, siempre buscando
+          optimizar cada proceso para alcanzar la máxima eficiencia y
           efectividad en mi código. Dedicado y enfocado para establecer y lograr
           metas ambiciosas, asegurando así un rendimiento superior y un progreso
           constante en mis proyectos. Me gusta salir de mi zona de confort y soy
@@ -49,9 +49,8 @@
         </p>
       </div>
     </div>
+    <hr class="linea-hr" />
   </div>
-
-  <hr class="linea-hr" />
 </section>
 
 <section class="webSections">
@@ -88,7 +87,7 @@
     <div class="certificatePlatform">
       <p>Certificado {{ certificate.platform }}</p>
       <a
-        href="{{certificate.link}}"
+        href="{{ certificate.link }}"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -232,9 +231,9 @@
     </div>
   </div>
 </section>
-
 <!-- =========================== Experience end =========================== -->
-
-<footer class="sectionCurriculum sectionTitle">
-  <h2>Contacto</h2>
-</footer>
+<section>
+  <h2 class="sectionCurriculum sectionTitle">Contacto</h2>
+  <app-footer></app-footer>
+  <div class="final"></div>
+</section>

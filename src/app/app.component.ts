@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public socialIcons: Array<{ title: string, icon: string, address: string }> = [
-    { title: 'linkedin', icon: './assets/icons/social1.svg', address: 'https://www.linkedin.com/in/osman-herrera-395428236/' },
+    { title: 'linkedin', icon: './assets/icons/social1.svg', address: 'https://www.linkedin.com/in/osmanherrera/' },
     { title: 'whatsapp', icon: './assets/icons/social2.svg', address: 'https://wa.me/50489709082' },
     { title: 'email',    icon: './assets/icons/social3.svg', address: 'mailto:contact@osmanherrera.dev' },
     { title: 'github',   icon: './assets/icons/social4.svg', address: 'https://github.com/osmanjosue' },

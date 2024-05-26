@@ -17,7 +17,7 @@ body {
   position: relative;
   width: 100%;
   font-family: "Ubuntu", "Merriweather Sans", Arial, Helvetica;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 a {
@@ -26,6 +26,10 @@ a {
 
 h2 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .padding-ul {
@@ -52,7 +56,7 @@ h2 {
   flex-wrap: wrap;
 }
 
-.iconoYname {
+.icono-n-name {
   margin-right: auto;
   display: flex;
   align-items: center;
@@ -81,6 +85,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 }
 
 .cardProfile {
@@ -109,45 +114,45 @@ h2 {
   padding-top: 50px;
 }
 
-  .profilePicture>img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    background: var(--background);
-    border-radius: 25px;
-  }
+.profilePicture>img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: var(--background);
+  border-radius: 25px;
+}
 
-  .iconButtons {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-    width: 60%;
-  }
+.iconButtons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  width: 60%;
+}
 
-  .iconButtons a {
-    margin: 3px;
-    width: 20%;
-    aspect-ratio: 1;
-    border-radius: 10px;
-    background: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.iconButtons a {
+  margin: 3px;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .sectionTitle {
   flex-basis: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3%;
+  gap: 10px 0px;
+  margin-bottom: 20px;
 }
 
 .linea-hr {
   width: 80%;
-  margin-bottom: 50px;
 }
 
 .aboutMe {
@@ -162,6 +167,13 @@ h2 {
 .contactLogo {
   height: 80%;
   width: 80%;
+}
+
+.label_icon2 {
+  flex-direction: column;
+  margin-bottom: 0;
+  gap: 10px;
+
 }
 
 .colorTheme {
@@ -188,7 +200,6 @@ h2 {
   width: 80%;
   margin: 0 auto;
   flex-wrap: wrap;
-  margin-bottom: 50px;
 }
 
 .technologies>a {
@@ -257,16 +268,19 @@ h2 {
   border-radius: 25px;
   padding: 10px;
   font-size: 1.3rem;
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
+  ;
   flex-wrap: wrap;
 }
 
 .formation-n-date>li {
   margin-right: auto;
 }
+
 .formation-n-date>p {
   margin-left: auto;
 }
+
 /* ================= Formation end ================= */
 /* ================= Experience start ================= */
 
@@ -286,7 +300,6 @@ h2 {
   width: 100%;
   margin: 0 auto;
   background: var(--background);
-  height: 10vh;
   color: var(--front);
   display: flex;
   justify-content: center;
@@ -294,7 +307,6 @@ h2 {
   font-size: 1.5rem;
   gap: 0 30%;
   flex-wrap: wrap;
-  min-width: 320px;
 }
 
 .experienceDetails {
@@ -325,11 +337,14 @@ h2 {
 }
 
 .label_icon {
+  display: flex;
   margin: 10px 40px;
-  flex-basis: 20%;
   display: flex;
   align-items: center;
   margin-left: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 0px;
 }
 
 .label_icon>p {
@@ -345,6 +360,88 @@ h2 {
 /* ================= Experience end ================= */
 /* ================= Footer start ================= */
 
+.footerSections {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.footerSection {
+  flex-basis: 40%;
+  text-align: center;
+  gap: 5px 0px;
+  margin: 10px;
+}
+
+.footerSection-second {
+  text-align: start;
+}
+
+.footerSection input {
+  width: 200px;
+}
+
+.formFlex textarea {
+  max-width: 400px;
+  resize: none;
+}
+
+textarea::placeholder {
+  font-family: "Ubuntu", "Merriweather Sans", Arial, Helvetica;
+}
+
+.formFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
+}
+
+.formButton {
+  width: 100px;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+small {
+  color: var(--variant);
+}
+
+.footerSection-first {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMethod {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  background: var(--background);
+  border-radius: 35px;
+  align-items: center;
+}
+
+.contactLogo2 {
+  width: 40px;
+  margin: 5px 0px 5px 20px;
+}
+
+.contactMethod>p {
+  color: var(--front);
+  padding: 15px;
+}
+
+.final {
+  background: black;
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+}
 
 /* ================= Footer end ================= */
