@@ -25,10 +25,9 @@ export class FooterComponent {
   });
 
   enviarFormularioContacto() {
-    // console.log(this.contactForm.value)
     this.emailService.enviarCorreo(this.contactForm.value)
-      // .subscribe(resp => console.log(resp))
-    // this.contactForm.reset();
+      .subscribe(console.log)
+    this.contactForm.reset();
   }
 
 }
