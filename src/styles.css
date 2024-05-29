@@ -389,7 +389,7 @@ h3 {
   resize: none;
 }
 
-textarea::placeholder {
+textarea, textarea::placeholder {
   font-family: "Ubuntu", "Merriweather Sans", Arial, Helvetica;
 }
 
