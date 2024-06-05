@@ -25,9 +25,20 @@ export class FooterComponent {
   });
 
   enviarFormularioContacto() {
+    this.formSubmitted = true;
     this.emailService.enviarCorreo(this.contactForm.value)
-      .subscribe(console.log)
-    this.contactForm.reset();
+      .subscribe({
+        next: () => {
+          alert("Mensaje enviado con éxito");
+          this.formSubmitted = false
+          this.contactForm.reset();
+        },
+        error: () => {
+          alert("No se pudo enviar el mensaje");
+          this.formSubmitted = false
+          this.contactForm.reset();
+        }
+      })
   }
 
 }

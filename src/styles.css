@@ -44,6 +44,16 @@ h3 {
   height: 175px;
 }
 
+.introMessage {
+  position: relative;
+  padding: 10px;
+  color: var(--front);
+  width: 100%;
+  /* font-size: 2rem; */
+  font-size: calc(0.7vw + 1vh);
+  background: rebeccapurple;
+}
+
 .navbarContainer {
   position: relative;
   display: flex;
@@ -200,6 +210,7 @@ h3 {
   width: 80%;
   margin: 0 auto;
   flex-wrap: wrap;
+  pointer-events: none;
 }
 
 .technologies>a {
@@ -389,7 +400,8 @@ h3 {
   resize: none;
 }
 
-textarea, textarea::placeholder {
+textarea,
+textarea::placeholder {
   font-family: "Ubuntu", "Merriweather Sans", Arial, Helvetica;
 }
 
@@ -442,6 +454,11 @@ small {
   width: 100%;
   height: 50px;
   margin-top: 30px;
+}
+
+.inhabilitarDiv {
+  filter: blur(3px);
+  pointer-events: none;
 }
 
 /* ================= Footer end ================= */
