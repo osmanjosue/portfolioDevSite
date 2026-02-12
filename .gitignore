@@ -4,6 +4,7 @@
 /dist
 .env
 src/environments/*
+src/osmanHerreraSite-workspace.code-workspace
 # /dist
 /tmp
 /out-tsc

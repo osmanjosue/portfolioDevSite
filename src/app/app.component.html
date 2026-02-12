@@ -16,7 +16,10 @@
 </section>
 
 <section style="position: relative; width: 100%">
-  <p class="introMessage">Este sitio lo elaboré como una version descriptiva, simple y funcional, estaré trabajando en una version mas refinada. </p>
+  <p class="introMessage">
+    Este sitio lo elaboré como una version descriptiva, simple y funcional,
+    estaré trabajando en una version mas refinada.
+  </p>
 </section>
 
 <section class="profile">
@@ -31,25 +34,60 @@
           [href]="icons.address"
           target="_blank"
           rel="noopener noreferrer"
-          ><img class="contactLogo colorTheme" [src]="icons.icon"
-        /></a>
+          ><span
+            class="icon-mask"
+            [style.--icon-url]="'url(' + icons.icon + ')'"
+          ></span>
+        </a>
       </div>
     </div>
 
     <div class="sectionTitle">
-      <h2>Osman Herrera</h2>
-      <p style="margin-top: -10px">Desarrollador FullStack!</p>
-      <p style="margin-top: -5px">Diseñador Gráfico!</p>
-      <hr style="width: 70%" />
+      <div>
+        <h2>Osman Herrera</h2>
+      </div>
+      <div class="sectionTitle_name_CV">
+        <div>
+          <div class="label_icon">
+            <p>Desarrollador FullStack!</p>
+          </div>
+          <div>
+            <div class="label_icon">
+              <p>Diseñador Gráfico!</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="CV_button"
+          title="Este es mi currículo actualizado en formato PDF"
+        >
+          <a href="" target="_blank" rel="noopener noreferrer" download>
+            <span
+              class="icon-mask"
+              style="
+                --icon-url: url(&quot;./assets/icons/Download_icon.svg&quot;);
+              "
+            ></span>
+          </a>
+        </div>
+        <!-- <div
+          class="CV_button"
+          title="Este es mi currículo actualizado en formato PDF"
+        >
+          <a target="_blank" rel="noopener noreferrer"
+            ><img
+              class="contactLogo colorTheme"
+              src="./assets/icons/Download_icon.svg"
+          /></a>
+        </div> -->
+      </div>
+      <hr style="width: 100%" />
       <div class="aboutMe">
         <p>
-          Enfocado en la productividad y los resultados, siempre buscando
-          optimizar cada proceso para alcanzar la máxima eficiencia y
-          efectividad en mi código. Dedicado y enfocado para establecer y lograr
-          metas ambiciosas, asegurando así un rendimiento superior y un progreso
-          constante en mis proyectos. Me gusta salir de mi zona de confort y soy
-          una persona en búsqueda de retos sin dejar de lado la responsabilidad
-          y lealtad de los compromisos y deberes hacia mi trabajo.
+          Soy un desarrollador web independiente con bases firmes en lógica de
+          programación y capacidad de aprendizaje autónomo. Continuio mejorando
+          mis habilidadesmediante certificaciones constantes. Se me reconoce por
+          ser una persona comprometida, proactiva y leal en todos mis proyectos.
         </p>
       </div>
     </div>
@@ -63,11 +101,13 @@
   </div>
   <div class="technologies">
     <a *ngFor="let technology of technologies">
-      <img
-        class="skillLogo colorTheme"
-        src="./assets/icons/technologies-{{ technology.title }}.svg"
+      <span
+        class="skillLogo icon-mask"
+        [style.--icon-url]="
+          'url(./assets/icons/technologies-' + technology.title + '.svg)'
+        "
         alt=""
-      />
+      ></span>
       <p class="technologyName">{{ technology.title }}</p>
     </a>
   </div>
@@ -95,10 +135,10 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          class="colorTheme linkExterno"
-          src="./assets/icons/linkExterno.svg"
-        />
+        <span
+          class="colorTheme linkExterno icon-mask"
+          [style.--icon-url]="'url(./assets/icons/linkExterno.svg)'"
+        ></span>
       </a>
     </div>
     <div class="formation-n-date">
@@ -124,17 +164,21 @@
           Desarrollador <span class="colorTheme">web</span> en Fundación
           Prolancho
         </p>
-        <p class="colorTheme">2023-2024</p>
+        <p class="colorTheme">2023-2026</p>
       </div>
 
       <div class="iconButtons__experience">
         <div class="label_icon">
           <p>Repositorio del Proyecto</p>
           <a
-            ><img
-              class="contactLogo colorTheme"
-              src="./assets/icons/technologies-GitHub.svg"
-          /></a>
+            href="https://github.com/osmanjosue/fundacionProlanchoSiteFrontAndBack"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span
+              class="icon-mask"
+              [style.--icon-url]="'url(./assets/icons/technologies-GitHub.svg)'"
+            ></span>
+          </a>
         </div>
         <div class="label_icon">
           <p>Sitio Web</p>
@@ -142,10 +186,11 @@
             href="https://www.fundacionprolancho.org"
             target="_blank"
             rel="noopener noreferrer"
-            ><img
-              class="contactLogo colorTheme"
-              src="./assets/icons/website.svg"
-          /></a>
+            ><span
+              class="contactLogo colorTheme icon-mask"
+              [style.--icon-url]="'url(./assets/icons/website.svg)'"
+            ></span>
+          </a>
         </div>
       </div>
 
@@ -196,19 +241,21 @@
             href="https://www.facebook.com/beomegusta/"
             target="_blank"
             rel="noopener noreferrer"
-            ><img
-              class="contactLogo colorTheme"
-              src="./assets/icons/facebook.svg"
-          /></a>
+            ><span
+              class="contactLogo icon-mask"
+              [style.--icon-url]="'url(./assets/icons/facebook.svg)'"
+            ></span>
+          </a>
         </div>
 
         <div class="label_icon">
           <p>Sitio Web</p>
           <a
-            ><img
-              class="contactLogo colorTheme"
-              src="./assets/icons/website.svg"
-          /></a>
+            ><span
+              class="contactLogo colorTheme icon-mask"
+              [style.--icon-url]="'url(./assets/icons/website.svg)'"
+            ></span
+          ></a>
         </div>
       </div>
       <ul class="experienceDetails padding-ul">
@@ -241,63 +288,3 @@
   <app-footer></app-footer>
   <div class="final"></div>
 </section>
-
-<!-- <section style="width: 80%">
-  <h5>Campaña de Donacion</h5>
-  <p>
-    Hola...¡Únete a Nuestra Campaña de Donación para la Fundación Proyecto
-    Propósito! Este mes de junio, te invitamos a ser parte de un movimiento que
-    transforma vidas. Nuestra campaña de donación está dedicada a apoyar la
-    Fundación Proyecto Propósito, y necesitamos tu ayuda para seguir llevando
-    educación de calidad a la Escuela Luis Bográn y a muchas otras escuelas que
-    necesitan nuestro apoyo.<br />
-    ¿Por qué donar?
-  </p>
-
-  <p>
-    Porque creemos en el poder de la educación para cambiar el mundo.<br />
-    Cada donación nos permite:
-  </p>
-  <ul>
-    <li>
-      Equipar aulas con los materiales necesarios para un aprendizaje efectivo.
-    </li>
-    <li>
-      Capacitar a los maestros para que puedan ofrecer la mejor educación
-      posible.
-    </li>
-    <li>
-      Implementar programas educativos innovadores que inspiran a los
-      estudiantes a alcanzar su máximo potencial.
-    </li>
-  </ul>
-  <p>Tu apoyo hace la diferencia</p>
-  <p>
-    Cada lempira , cada dólar, cada donación es un paso más hacia un futuro
-    mejor para cientos de niños. Juntos podemos derribar las barreras que
-    impiden el acceso a una educación de calidad y brindarles las herramientas
-    necesarias para un futuro brillante.
-  </p>
-  <br />
-  <p>¿Cómo puedes ayudar?</p>
-  <ul>
-    <li>
-      Donando hoy mismo: Cualquier cantidad es bienvenida y hará una gran
-      diferencia.
-    </li>
-    <li>
-      Compartiendo nuestra campaña: Corre la voz entre tus amigos, familiares y
-      en tus redes sociales.
-    </li>
-    <li>
-      Participando activamente: Únete a nuestras actividades de recaudación y sé
-      un embajador de la educación.
-    </li>
-  </ul>
-  <p>Tu generosidad puede cambiar el destino de muchos niños.</p>
-  <p>
-    No dejes pasar esta oportunidad de hacer una diferencia significativa.
-    Juntos, podemos construir un futuro lleno de oportunidades y esperanza.<br><br>
-    ¡Dona ahora y sé parte del cambio que queremos ver en el mundo!
-  </p>
-</section> -->
