@@ -1,7 +1,7 @@
 :root {
   --background: #000000;
   --front: #ffffff;
-  --variant: #ff5e00;
+  /* --variant: #ff5e00; */
   /* --variant: #8800ff; */
   --card: #e8e8e8;
 }
@@ -248,6 +248,19 @@ h3 {
 }
 
 /* ================= skills start ================= */
+/* ================= boton de descarga ================= */
+
+
+.btn-cv:hover {
+  background: var(--variant); /* Se llena de color al hover */
+  box-shadow: 0 0 20px var(--variant);
+  transform: scale(1.05);
+}
+
+/* Reutilizamos tu lógica de icono */
+
+/* ================= boton de descarga end ================= */
+
 
 .sectionCurriculum {
   display: flex;
