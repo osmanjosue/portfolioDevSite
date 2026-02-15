@@ -1,7 +1,7 @@
 :root {
   --background: #000000;
   --front: #ffffff;
-  /* --variant: #ff5e00; */
+  --variant: #ff5e00;
   /* --variant: #8800ff; */
   --card: #e8e8e8;
 }
@@ -222,6 +222,7 @@ h3 {
 
 
 /* Esta clase tiene toda la lógica pesada */
+
 .icon-mask {
   aspect-ratio: 1 / 1;
   display: inline-block;
