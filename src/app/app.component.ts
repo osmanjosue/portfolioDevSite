@@ -21,10 +21,10 @@ export class AppComponent implements OnInit {
 
   //Seccion #2: Lista de redes sociales con sus respectivos íconos y enlaces
   public socialIcons: SocialIcon[] = [
-    { title: 'linkedin', icon: './assets/icons/social1.svg', address: 'https://www.linkedin.com/in/osmanherrera/' },
-    { title: 'whatsapp', icon: './assets/icons/social2.svg', address: 'https://wa.me/50489709082' },
-    { title: 'email', icon: './assets/icons/social3.svg', address: 'mailto:contact@osmanherrera.dev' },
-    { title: 'github', icon: './assets/icons/social4.svg', address: 'https://github.com/osmanjosue' },
+    { title: 'linkedin', icon: '/assets/icons/social1.svg', address: 'https://www.linkedin.com/in/osmanherrera/' },
+    { title: 'whatsapp', icon: '/assets/icons/social2.svg', address: 'https://wa.me/50489709082' },
+    { title: 'email', icon: '/assets/icons/social3.svg', address: 'mailto:contact@osmanherrera.dev' },
+    { title: 'github', icon: '/assets/icons/social4.svg', address: 'https://github.com/osmanjosue' },
   ];
 
   // Seccion #3: Lista de tecnologías con sus respectivos íconos
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
 
   // c. Función para generar la ruta del ícono a partir del nombre
   getIconPath(name: string): string {
-    return `./assets/icons/technologies-${name}.svg`;
+    return `/assets/icons/technologies-${name}.svg`;
   }
 
   ngOnInit(): void {

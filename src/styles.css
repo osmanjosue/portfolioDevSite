@@ -76,7 +76,7 @@ h3 {
 }
 
 .OHicono {
-  mask-image: url(./assets/icons/OsmanHerreraLogo3.svg);
+  mask-image: url(/assets/icons/OsmanHerreraLogo3.svg);
   width: 100px;
   height: 90px;
   background: var(--front);
@@ -377,6 +377,8 @@ h3 {
   margin: 0 auto;
   padding-bottom: 40px;
   margin-top: 50px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .experience {
@@ -389,6 +391,7 @@ h3 {
   align-items: center;
   font-size: 1.5rem;
   gap: 0 30%;
+  padding: 20px;
   flex-wrap: wrap;
 }
 
@@ -442,31 +445,34 @@ h3 {
 
 .footerSections {
   display: flex;
-  align-items: center;
-  width: 70%;
+  align-items: flex-start; /* Alineación superior para que el texto y form cuadren */
+  width: 80%;
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 50px;
 }
 
 .footerSection {
-  flex-basis: 40%;
+  flex-basis: 45%;
   text-align: center;
-  gap: 5px 0px;
-  margin: 10px;
+  min-width: 320px; /* Asegura que en móvil se apilen */
+  margin: 20px;
 }
 
 .footerSection-second {
   text-align: start;
 }
 
-.footerSection input {
-  width: 200px;
-}
-
+.footerSection input,
 .formFlex textarea {
-  max-width: 400px;
-  resize: none;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 textarea,
@@ -481,13 +487,39 @@ textarea::placeholder {
 }
 
 .formButton {
-  width: 100px;
+  width: 150px;
+  padding: 12px;
+  background: var(--background);
+  color: var(--front);
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+/* Efecto Hover similar a tus otros botones */
+.formButton:not(:disabled):hover {
+  background: var(--variant);
+  box-shadow: 0 0 15px var(--variant);
+  transform: scale(1.02);
+}
+
+.formButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .formFields {
   display: flex;
   flex-direction: column;
   gap: 5px
+}
+
+.formFields label {
+  font-weight: 700;
+  color: var(--background);
 }
 
 small {
@@ -497,25 +529,41 @@ small {
 .footerSection-first {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .contactMethod {
+
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit;        /* Mantiene el color del texto que ya definiste */
   display: flex;
   align-self: center;
   align-items: center;
   background: var(--background);
   border-radius: 35px;
-  align-items: center;
+  cursor: pointer;       /* Asegura que salga la "manito" al pasar el mouse */
+
+}
+
+.contactMethod:hover {
+  transform: translateX(10px);
 }
 
 .contactLogo2 {
   width: 40px;
+  height: 45px;
   margin: 5px 0px 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contactMethod>p {
   color: var(--front);
   padding: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  word-break: break-all;
 }
 
 .final {
@@ -526,8 +574,9 @@ small {
 }
 
 .inhabilitarDiv {
-  filter: blur(3px);
+  filter: blur(2px);
   pointer-events: none;
+  opacity: 0.6;
 }
 
 /* ================= Footer end ================= */
